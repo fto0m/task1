@@ -3,7 +3,7 @@
 مشروع Web API بسيط بـ ASP.NET Core 8 يمثّل نظام Courses / Students / Teachers مع علاقات بينهم، CRUD كامل، Validation، Swagger، و integration مع قاعدة بيانات حقيقية (SQLite) عن طريق Entity Framework Core.
 
 ## المتطلبات
-- .NET 8 SDK: https://dotnet.microsoft.com/download
+- .NET 10 SDK: https://dotnet.microsoft.com/download
 
 ## طريقة التشغيل
 ```bash
@@ -45,12 +45,3 @@ CourseManagementApi/
 ## التبديل بين In-Memory و DB حقيقية
 جوا `Program.cs` في سطرين: واحد مفعّل (`UseSqlite`) وواحد معلّق (`UseInMemoryDatabase`). لو بدك تجرب بدون ملف db فعلي، علّق سطر الـ SQLite وفعّل سطر الـ InMemory.
 
-## رفع المشروع على GitHub
-```bash
-git init
-git add .
-git commit -m "Initial commit: Course Management API"
-git branch -M main
-git remote add origin <رابط الريبو تبعك>
-git push -u origin main
-```
