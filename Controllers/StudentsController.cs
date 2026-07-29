@@ -82,7 +82,6 @@ namespace CourseManagementApi.Controllers
             return NoContent();
         }
 
-        // POST: api/students/5/courses/2  -> تسجيل طالب بكورس (Enroll)
         [HttpPost("{studentId}/courses/{courseId}")]
         public async Task<IActionResult> EnrollStudentInCourse(int studentId, int courseId)
         {
@@ -110,7 +109,6 @@ namespace CourseManagementApi.Controllers
             return Ok(new { message = $"تم تسجيل {student.FullName} بكورس {course.Title} بنجاح" });
         }
 
-        // DELETE: api/students/5/courses/2 -> إلغاء تسجيل طالب من كورس
         [HttpDelete("{studentId}/courses/{courseId}")]
         public async Task<IActionResult> UnenrollStudentFromCourse(int studentId, int courseId)
         {
