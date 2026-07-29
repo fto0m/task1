@@ -17,13 +17,11 @@ namespace CourseManagementApi.Models
         [Range(1, 12, ErrorMessage = "عدد الساعات المعتمدة لازم يكون بين 1 و 12")]
         public int CreditHours { get; set; }
 
-        // Foreign Key -> Teacher (كل كورس إله مدرّس واحد، ممكن يكون فاضي لسا)
         public int? TeacherId { get; set; }
 
         [ForeignKey(nameof(TeacherId))]
         public Teacher? Teacher { get; set; }
 
-        // Many-to-Many مع Student عن طريق جدول الوصل StudentCourse
         public List<StudentCourse> StudentCourses { get; set; } = new();
     }
 }
