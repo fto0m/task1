@@ -1,6 +1,5 @@
 namespace CourseManagementApi.Models
 {
-    // جدول الوصل اللي بيمثل تسجيل الطالب بكورس معين (العلاقة Many-to-Many)
     public class StudentCourse
     {
         public int StudentId { get; set; }
