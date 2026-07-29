@@ -49,7 +49,6 @@ namespace CourseManagementApi.Controllers
         [HttpPost]
         public async Task<ActionResult<CourseReadDto>> CreateCourse(CourseCreateDto dto)
         {
-            // [ApiController] بيعمل التحقق من الـ ValidationAttributes تلقائيًا وبيرجع 400 لو فيه خطأ
             if (dto.TeacherId.HasValue)
             {
                 var teacherExists = await _context.Teachers.AnyAsync(t => t.Id == dto.TeacherId);
