@@ -14,7 +14,6 @@ namespace CourseManagementApi.Models
         [EmailAddress(ErrorMessage = "صيغة الايميل غير صحيحة")]
         public string Email { get; set; } = string.Empty;
 
-        // Many-to-Many مع Course عن طريق جدول الوصل StudentCourse
         public List<StudentCourse> StudentCourses { get; set; } = new();
     }
 }
