@@ -2,7 +2,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CourseManagementApi.DTOs
 {
-    // اللي بيرجع للمستخدم (Read) - ما منرجّع الـ Entity مباشرة، منرجع View Model
     public class CourseReadDto
     {
         public int Id { get; set; }
@@ -30,7 +29,6 @@ namespace CourseManagementApi.DTOs
         public int? TeacherId { get; set; }
     }
 
-    // اللي المستخدم بيبعته لما يعمل PUT (Update)
     public class CourseUpdateDto
     {
         [Required(ErrorMessage = "اسم الكورس مطلوب")]
